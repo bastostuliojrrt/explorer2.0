@@ -35,7 +35,7 @@ body {
   width: 15rem;
   height: 15rem;
   border-radius: 100%;
-  background: linear-gradient(#ffb100, #ffffff);
+  background: linear-gradient(blueviolet, #ffffff);
   animation: animate 4s linear infinite;
 }
 
@@ -58,7 +58,7 @@ body {
 
 h1 {
   font-size: 2.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 p {
@@ -71,21 +71,37 @@ li {
   margin-bottom: 0.5rem;
 }
 
-button {
-  width: 100%;
-  padding-block: 0.8rem;
-  cursor: pointer;
-  background-color: #ffb100;
-  border: none;
-  border-radius: 0.4rem;
+a{
+  text-decoration: none;
+}
+
+.button{
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  position: relative;
+  width: 32rem;
+  padding: 12px 0;
   font-size: 1.6rem;
-  font-weight: 600;
+  background: none;
+  color: #fff;
+  border: 1px solid blueviolet;
+  cursor: pointer;
+  overflow: hidden;
 }
 
-button:hover{
-
+.button::before{
+  content: '';
+  width: 0%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  transition: all .5s;
+  background: blueviolet;
+  z-index: -1;
 }
 
-.linklist {
-  width: 90%;
+.button:hover::before{
+  width: 100%;
 }
